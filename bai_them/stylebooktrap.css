@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.menu {
+  background-color: white;
+  display: flex;
+}
+.login {
+  margin-left: auto;
+}
+.slideanh {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.tieude {
+  text-align: center;
+  background-color: white;
+}
+.phan2 {
+  display: flex;
+}
+
+.cot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.anhgiua {
+  width: 100%;
+}
+.anh {
+  width: 50px;
+  height: 50px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mota {
+  flex: 1;
+}
+.othongtin {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.oanh {
+  display: flex;
+}

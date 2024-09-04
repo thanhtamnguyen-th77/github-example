@@ -1,0 +1,46 @@
+/*.heading {
+  font-size: 40px;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+/* những thẻ inline b,a... ko dùng height,witdh
+/* chuyển inline thành block
+//* display:block (xuống dòng), 
+display: inline block      (để nằm trên hàng)
+rồi chỉnh height witdh
+*/
+.iten {
+}
+.container {
+  width: 100%;
+  width: 820px;
+  height: 340px;
+  display: flex;
+  gap: 10px;
+  margin-inline: 50px;
+}
+.card {
+  min-width: 70px;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  position: relative;
+  transform: flex-grow 0.5s ease;
+}
+.card:hover {
+  flex-grow: 7;
+}
+.card-content > .title {
+  margin-left: 10px;
+  translate: 0 100%;
+  opacity: 0;
+}
+.card:hover.title {
+  opacity: 1;
+  translate: 0 0;
+}

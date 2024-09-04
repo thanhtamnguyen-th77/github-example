@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List with jQuery</title>
+    <link rel="stylesheet" href="jquery.css" />
+    <!-- Import jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Import external JavaScript file -->
+    <script src="/jquery.js" defer></script>
+  </head>
+  <body>
+    <!-- jQuery là một thư viện JavaScript phổ biến giúp đơn giản hóa việc tương tác với Document Object Model (DOM), xử lý sự kiện, hiệu ứng, và AJAX. Dưới đây là các kiến thức cơ bản mà bạn cần nắm vững khi học và làm việc với jQuery:
+
+1. Khái niệm cơ bản về jQuery
+   jQuery Selector: Cách để chọn các phần tử trong DOM.
+   Ví dụ: $("#id"), $(".class"), $("tag"), $("div > p"), $("input[name='name']").
+   Document Ready: Sử dụng $(document).ready() để đảm bảo rằng DOM đã được tải xong trước khi thực thi mã jQuery.
+      <div>1234</div>
+      
+      document.getElementById("input1").value 
+      $("input1").val();
+
+
+   2. Các phương thức thao tác DOM
+   Manipulation:
+   text(): Lấy hoặc thay đổi văn bản của phần tử.
+   html(): Lấy hoặc thay đổi HTML của phần tử.
+   val(): Lấy hoặc thay đổi giá trị của các phần tử input.
+   attr(): Lấy hoặc thay đổi giá trị của thuộc tính của phần tử.
+   css(): Lấy hoặc thay đổi thuộc tính CSS của phần tử.
+   addClass(), removeClass(), toggleClass(): Thêm, xóa, hoặc chuyển đổi các lớp CSS.
+   Adding/Removing Elements:
+   append(), prepend(): Thêm phần tử con vào cuối hoặc đầu của phần tử cha.
+   after(), before(): Thêm phần tử vào trước hoặc sau phần tử hiện tại.
+   remove(): Xóa phần tử khỏi DOM.
+   empty(): Xóa tất cả các phần tử con của phần tử hiện tại.
+
+   3. Event Handling
+   Sự kiện:
+   click(): Bắt sự kiện khi người dùng nhấp chuột.
+   on(): Bắt và quản lý các sự kiện khác nhau như click, mouseover, keyup, submit, v.v.
+   off(): Gỡ bỏ sự kiện đã được gán.
+   Event Delegation:
+   Sử dụng on() để gán sự kiện cho các phần tử được thêm vào DOM sau khi trang đã tải.
+
+   element.addEventListener("click", function(){})
+   $("element").on("click", function(){})
+
+   4. Effects & Animations
+   Hiệu ứng:
+   show(), hide(): Hiển thị hoặc ẩn phần tử.
+   toggle(): Chuyển đổi giữa hiển thị và ẩn.
+   fadeIn(), fadeOut(), fadeToggle(): Hiệu ứng mờ dần xuất hiện hoặc biến mất.
+   slideDown(), slideUp(), slideToggle(): Hiệu ứng trượt lên hoặc xuống.
+   Animation:
+   animate(): Tạo các hiệu ứng tùy chỉnh bằng cách thay đổi các thuộc tính CSS.
+
+   5. AJAX
+   $.ajax(): Thực hiện các yêu cầu AJAX đến máy chủ để gửi hoặc nhận dữ liệu mà không cần tải lại trang.
+   $.get(), $.post(): Gửi yêu cầu GET hoặc POST đơn giản.
+   load(): Tải nội dung từ máy chủ vào một phần tử HTML.
+   Xử lý dữ liệu trả về: Xử lý JSON, XML, hoặc HTML trả về từ máy chủ.
+
+   6. Traversing DOM
+   Di chuyển trong DOM:
+   parent(), parents(), closest(): Tìm các phần tử cha của phần tử hiện tại.
+   children(), find(): Tìm các phần tử con hoặc phần tử con cháu.
+   siblings(), next(), prev(): Tìm các phần tử anh em, kế tiếp, hoặc trước đó.
+
+   7. Utility Functions
+   $.each(): Lặp qua các phần tử của mảng hoặc đối tượng.
+    $.extend(): Mở rộng một đối tượng bằng cách thêm thuộc tính của đối tượng khác vào.
+   $.trim(): Loại bỏ khoảng trắng ở đầu và cuối của chuỗi.
+  
+   8. Plugins
+   Viết và sử dụng plugin: jQuery cho phép tạo và sử dụng các plugin để mở rộng chức năng.
+   Data Attributes: Sử dụng data() để lưu trữ và lấy dữ liệu từ các thuộc tính data-\* trong HTML.
+  
+   9. Best Practices
+   Unobtrusive JavaScript: Tách biệt mã JavaScript với mã HTML.
+   Chaining: jQuery cho phép "chain" nhiều phương thức lại với nhau để viết mã gọn hơn.
+   Hiểu biết về Performance: Sử dụng selector hiệu quả, cache DOM elements, hạn chế thao tác với DOM khi không cần thiết.
+  10.   Debugging & Troubleshooting
+      Sử dụng console.log(): Để kiểm tra giá trị biến và trạng thái của chương trình.
+      Kiểm tra và xử lý lỗi AJAX: Kiểm tra trạng thái HTTP và lỗi server. -->
+
+    <h2>Todo List with jQuery</h2>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+      <label for="age">Age:</label>
+      <input type="text" id="age" />
+      <label for="phone">Phone Number:</label>
+      <input type="number" id="PhoneNumber" />
+      <label for="pass">PassWord:</label>
+      <input type="password" id="password" />
+      <input type="password" id="confirnpass" />
+
+      <button id="confirn">confirn password</button>
+
+      <button id="addButton">Add/Update</button>
+    </div>
+    <div id="studentList">
+      <table id="studentTable">
+        <tr>
+          <th>Số thứ tự</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>phonenumber</th>
+          <th>PASSWORD</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
